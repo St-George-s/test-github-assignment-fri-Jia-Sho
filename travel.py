@@ -15,8 +15,7 @@ def print_travel_details(destination, people_count, travel_method):
 
 def print_all_trips(destination,people_count,travel_method):
     for i in range(len(destination)):
-        print("Your ",i," trip was to",destination[i],"with",people_count[i],"people by",travel_method[i])
-
+        print("Your ",i+1," trip is to",destination[i],"with",people_count[i],"people by",travel_method[i])
 
 #main
 destination_array = []
