@@ -21,11 +21,21 @@ car("BMW", 2020, 4000, "Matt Black")
 
 # pet shop data
 class PetFood:
-    def __init__(self, brand, AnimalType, Weight, price, stock):
+    def __init__(self, brand, animalType, weight, price, stock):
         self.brand = brand
-        self.AnimalType = AnimalType
-        self.Weight = Weight
+        self.animalType = animalType
+        self.weight = weight
         self.price = price
         self.stock = stock
 
-PetFood_1 = PetFood
+petFoodStock = [
+    PetFood("Purina", "cat", 1.5 , 24.99 , 10),
+    PetFood("Pedigree", "Dog", 2.0 , 18.99 , 20)
+]
+
+for i in range(len(petFoodStock)):
+    print(petFoodStock[i].weight)
+    print("The brand", petFoodStock[i].brand , "is for", petFoodStock[i].animalType, "weighing", petFoodStock[i].weight )
+
+for pet in petFoodStock:
+    print(pet.price)
