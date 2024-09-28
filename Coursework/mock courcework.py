@@ -13,7 +13,7 @@ def attractions_data():
             category.append(row[1])
             visitors.append(int(row[2]))
             daysOpen.append(int(row[3]))
-            height.append(row[4])
+            height.append(float(row[4][:-1]))
     return attractions, category, visitors, daysOpen , height
 
 
@@ -49,9 +49,19 @@ def service_roller_coster(attraction, category, daysOpen):
  
                     file.write(attraction[i] )
                     
+# print no. of attraction with heigh => 1
+def height_restriction(attractions, height):
+    height_restriction = []
+    index = 0
+    for i in range(0, len(height)):
+        if height[i] >= 1.0:
+            index = i
+            height_restriction.append(attractions[index])
+    print(height_restriction)
 
 #main program
 attractions_data()
 least_visited_attraction(attractions, visitors)
 most_visited_attraction(attractions, visitors)
 service_roller_coster(attractions, category, daysOpen)
+height_restriction(attractions, height)
