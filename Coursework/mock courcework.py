@@ -46,7 +46,6 @@ def service_roller_coster(attraction, category, daysOpen):
             if category[i] == "Roller Coaster":
                 days = daysOpen[i] % 90
                 if 90-days <= 7:
- 
                     file.write(attraction[i] )
                     
 # print no. of attraction with heigh => 1
