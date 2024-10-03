@@ -1,7 +1,7 @@
 import csv
 # defining class order
 class Order():
-    def __init__(self, customer_name, product_purchased, amount_spent, customerID , category_product):
+    def __init__(self, customerID,customer_name, product_purchased, amount_spent , category_product):
         self.customer_name = customer_name
         self.product_purchased = product_purchased
         self.amount_spent = amount_spent
@@ -11,11 +11,11 @@ class Order():
 #read csv file in arrays of record
 def readOrdersFromCSV():
     orders = []
-    with open("Mock test/orders.csv", "r") as file:
+    with open("Mock test/ordersExtended.csv", "r") as file:
         reader = csv.reader(file)
         header = next(reader)
         for row in reader:
-            customer_orders = Order(row[0],row[1], float(row[2]))
+            customer_orders = Order(row[0],row[1], row[2], float(row[3]), row[4])
             orders.append(customer_orders)
     return orders
 
@@ -31,12 +31,14 @@ def findMaxOrderWithTv(orders):
 
 def discount(orders):
     with open("discount.txt","a") as file:
-    for i in range(0, len(orders)):
-        if orders[i].customerID % 5 == 0:
-            product = orders[i].category_product[:3]
-            file.write(orders[i].customerID, product, "Discount code assigned")
-            
-
+        for i in range(0, len(orders)):
+            if orders[i].customerID % 5 == 0:
+                product = orders[i].category_product[:3]
+                file.write(orders[i].customerID, product, "Discount code assigned")
+            else:
+                products = orders[i].category_product[:3]
+                file.write(orders[i].customerID , products, "NO DISCOUNT")
 # main program
 orders = readOrdersFromCSV()
 findMaxOrderWithTv(orders)
+discount(orders)
