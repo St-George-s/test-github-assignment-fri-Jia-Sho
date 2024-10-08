@@ -1,4 +1,4 @@
-# Standard algorithm with parallel arrays #
+# 4 Standard algorithm with array of records #
 times_spent = [5, 3, 4, 6, 5]
 student_name = ["Alice", "Ben", "Cara", "David", "Eva"]
 activities = ["hillwalking", "canoeing", "climbing", "hillwalking", "canoeing"]

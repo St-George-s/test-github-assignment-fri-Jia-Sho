@@ -1,0 +1,4 @@
+1  Ele  NO DISCOUNT
+2  Com  NO DISCOUNT
+5  Ele  Discount code assigned
+10  Pho  Discount code assigned

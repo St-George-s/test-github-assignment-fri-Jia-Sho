@@ -1,3 +1,5 @@
+# 4 standard algorithm for a single array
+
 times_spent = [5, 3, 4, 6, 5]
 
 # Find Maximim

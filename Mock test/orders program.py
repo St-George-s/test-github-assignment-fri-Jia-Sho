@@ -15,7 +15,7 @@ def readOrdersFromCSV():
         reader = csv.reader(file)
         header = next(reader)
         for row in reader:
-            customer_orders = Order(row[0],row[1], row[2], float(row[3]), row[4])
+            customer_orders = Order(row[0] ,row[1], row[2], float(row[3]), row[4])
             orders.append(customer_orders)
     return orders
 
@@ -30,14 +30,24 @@ def findMaxOrderWithTv(orders):
     print("Maximum spent on TV is", maxOrder,"by", orders[maxIndex].customer_name)
 
 def discount(orders):
-    with open("discount.txt","a") as file:
-        for i in range(0, len(orders)):
-            if orders[i].customerID % 5 == 0:
+    with open("discount.txt","w") as file:
+        for i in range(len(orders)):
+            if int(orders[i].customerID) % 5 == 0:
                 product = orders[i].category_product[:3]
-                file.write(orders[i].customerID, product, "Discount code assigned")
+                file.write(orders[i].customerID,)
+                file.write("  ")
+                file.write(product)
+                file.write("  ") 
+                file.write("Discount code assigned")
+                file.write("\n")
             else:
                 products = orders[i].category_product[:3]
-                file.write(orders[i].customerID , products, "NO DISCOUNT")
+                file.write(orders[i].customerID)
+                file.write("  ")
+                file.write(products)
+                file.write("  ") 
+                file.write("NO DISCOUNT")
+                file.write("\n")
 # main program
 orders = readOrdersFromCSV()
 findMaxOrderWithTv(orders)
