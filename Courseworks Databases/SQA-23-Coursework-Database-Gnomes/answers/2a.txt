@@ -1,0 +1,2 @@
+a query to select customers who placed their order in a particular month
+a query to select orders with order dates
