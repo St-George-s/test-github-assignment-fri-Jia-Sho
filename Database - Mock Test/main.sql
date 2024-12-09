@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 SELECT E.eventName, S.name AS [Shop Name] , E.maxAttendees , e.eventDate
 FROM Event E, Shop S
 WHERE E.shopID = S.shopID
@@ -23,3 +24,5 @@ WHERE shopID IN (
 )
 AND date LIKE "2024-12-24";
 
+=======
+>>>>>>> a8ee91c (Added Class Test)
