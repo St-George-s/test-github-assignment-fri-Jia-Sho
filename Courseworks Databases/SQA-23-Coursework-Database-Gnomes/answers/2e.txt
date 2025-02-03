@@ -1,0 +1,3 @@
+2e - i- there might have been a change in price now, so its not the same paid at that time
+
+ii- by storing the original price and changed price
