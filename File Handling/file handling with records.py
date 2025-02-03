@@ -1,3 +1,4 @@
+import csv
 
 # arrays of records
 class Students:
