@@ -1,6 +1,6 @@
 import csv
 
-#defining the record Order
+#defining the record- Order
 class Order:
     def __init__(self, orderNum, date, email, option, cost, rating):
         self.orderNum = orderNum
@@ -12,11 +12,13 @@ class Order:
 
 #procedure to read the data from file into array of records
 def read_orders_data():
+    orders = []
     with open("2025 coursework/orders.txt", "r") as file:
         reader = csv.reader(file)
         for row in reader:
             order = Order(row[0], row[1], row[2], row[3], (row[4]), (row[5]))
             orders.append(order)
+    return orders
 
 # function to find the position of the customer who gave the first 5-star rating in the month entered by the user
 def position_winnner_customer(orders):
@@ -50,16 +52,15 @@ def countOption(orders):
     return total_delivered, total_collected
 
 # procedure to display the total number of orders delivered and collected to date
-def display_total_order_option(total_delivered, total_collected):
+def display_total_order_option(orders):
+    total_delivered, total_collected = countOption(orders)
     print("Total number of orders delivered to date: ", total_delivered)
     print("Total number of orders collected to date: ", total_collected)
 
 
 #main py
-orders =  []
-read_orders_data()
+orders = read_orders_data()
 position = position_winnner_customer(orders)
 winning_customers(orders, position)
-total_delivered, total_collected = countOption(orders)
-display_total_order_option(total_delivered, total_collected)
+display_total_order_option(orders)
  
