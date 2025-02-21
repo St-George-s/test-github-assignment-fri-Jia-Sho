@@ -1,0 +1,29 @@
+The prize members are:
+Teressa Jones
+Ross Durrant
+Ian Hunter
+James Kerr
+Tisa Sullivan
+Albert Nvodo
+
+The number of full marathons walked by each member are: 
+Nikolai Bryant5
+Susan Brown1
+Teressa Jones15
+Martin Daly9
+Ross Durrant15
+Greg Watson3
+Wendy Russell3
+Pamela Adkins2
+Ian Hunter14
+James Kerr19
+Lesley Wallace2
+Kim Pettigrew9
+Steven Johnstone0
+Ali Hussain0
+Hasan Abbas11
+Jacek Nowak7
+Mirka Kowalski6
+Rudo Hyper4
+Tisa Sullivan18
+Albert Nvodo14
